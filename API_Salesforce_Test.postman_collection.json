@@ -278,8 +278,8 @@
 											"    ",
 											"});",
 											"",
-											"pm.test(\"Response time should be less than 300ms\", function () {",
-											"    pm.expect(pm.response.responseTime).to.be.below(300);",
+											"pm.test(\"Response time should be less than 3000ms\", function () {",
+											"    pm.expect(pm.response.responseTime).to.be.below(3000);",
 											"});",
 											"",
 											"postman.setEnvironmentVariable(\"accountId\", \"\"+jsonData.id);"
@@ -354,8 +354,8 @@
 											"tests[\"Header should contain 'Cache-Control' value\"] = header === \"no-cache,must-revalidate,max-age=0,no-store,private\";",
 											"console.log(header)",
 											"",
-											"pm.test(\"Response time should be less than 300ms\", function () {",
-											"    pm.expect(pm.response.responseTime).to.be.below(300);",
+											"pm.test(\"Response time should be less than 3000ms\", function () {",
+											"    pm.expect(pm.response.responseTime).to.be.below(3000);",
 											"});",
 											"",
 											" "
@@ -431,8 +431,8 @@
 											"tests[\"Header should contain 'Cache-Control' value\"] = header === \"no-cache,must-revalidate,max-age=0,no-store,private\";",
 											"console.log(header)",
 											"",
-											"pm.test(\"Response time should be less than 300ms\", function () {",
-											"    pm.expect(pm.response.responseTime).to.be.below(300);",
+											"pm.test(\"Response time should be less than 3000ms\", function () {",
+											"    pm.expect(pm.response.responseTime).to.be.below(3000);",
 											"});",
 											"",
 											"pm.test(\"Body should have fields: 'message','errorCode','fields', string\", function () {",
@@ -528,8 +528,8 @@
 											"",
 											"});",
 											"",
-											"pm.test(\"Response time should be less than 300ms\", function () {",
-											"    pm.expect(pm.response.responseTime).to.be.below(300);",
+											"pm.test(\"Response time should be less than 3000ms\", function () {",
+											"    pm.expect(pm.response.responseTime).to.be.below(3000);",
 											"});",
 											"",
 											""
@@ -557,7 +557,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{url}}/services/data/v{{apiVersion}}/sobjects/Account/0011t00000dwdBoAAI",
+									"raw": "{{url}}/services/data/v{{apiVersion}}/sobjects/Account/{{accountId}}",
 									"host": [
 										"{{url}}"
 									],
@@ -567,7 +567,7 @@
 										"v{{apiVersion}}",
 										"sobjects",
 										"Account",
-										"0011t00000dwdBoAAI"
+										"{{accountId}}"
 									]
 								}
 							},
@@ -674,8 +674,8 @@
 											"tests[\"Header should contain 'Cache-Control' value\"] = header === \"no-cache,must-revalidate,max-age=0,no-store,private\";",
 											"console.log(header)",
 											"",
-											"pm.test(\"Response time should be less than 300ms\", function () {",
-											"    pm.expect(pm.response.responseTime).to.be.below(300);",
+											"pm.test(\"Response time should be less than 3000ms\", function () {",
+											"    pm.expect(pm.response.responseTime).to.be.below(3000);",
 											"});"
 										],
 										"type": "text/javascript"
